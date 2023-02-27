@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model BooksViewModel
+
+<h1>Book List Page @Model.PageInfo.CurrentPage</h1>
+
+@foreach (Book b in Model.Books)
+{
+    <div class="card card-outline-primary m-1 p-1">
+        <div class="bg-faded p-1">
+            <h4>
+                @b.Title
+                <span class="badge rounded-pill bg-primary" style="float:right">
+                    <small>@b.Price.ToString("c")</small>
+                </span>
+            </h4>
+        </div>
+        <div class="card-text p-1">@b.Author</div>
+    </div>
+}
+<div page-inf="@Model.PageInfo" page-act="Index" page-classes-enabled="true"
+     page-class="btn" page-class-normal="btn-outline-dark"
+     page-class-selected="btn-primary" class="btn-group pull-right m-1">
+</div>
+
+@*@foreach (Book b in Model.Books)
+    {
+        <ul>
+            <li>Title: @b.Title</li>
+            <li>Author: @b.Author</li>
+            <li>Price: @b.Price</li>
+            <li>Category: @b.Category</li>
+            <li>Page Count: @b.PageCount</li>
+            <li>Publisher: @b.Publisher</li>
+            <li>ISBN: @b.Isbn</li>
+        </ul>
+        <br />
+    }*@
+
+@*<div page-inf="@Model.PageInfo" page-act="Index"></div>*@
