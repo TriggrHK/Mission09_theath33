@@ -5,6 +5,7 @@
 @model BooksViewModel
 
 <h1>Book List Page @Model.PageInfo.CurrentPage</h1>
+@* added flex-box bootstrap styles *@
 <div class="d-flex flex-wrap">
     @foreach (Book b in Model.Books)
     {
