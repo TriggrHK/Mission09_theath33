@@ -2,14 +2,14 @@
 }
 @model Book
 
-<div class="card border-primary m-3 shadow-lg ">
+<div class="card border-primary m-3 shadow-lg w-auto">
 
     <div class="bg-dark text-white p-3">
         <h4>
-            <span class="text-decoration-underline text-uppercase">
+            <span class="text-uppercase">
                 @Model.Title
             </span>
-            <span class="badge rounded-pill bg-primary" style="float:right">
+            <span class="badge rounded-pill bg-primary mx-3" style="float:right">
                 <small>@Model.Price.ToString("c")</small>
             </span>
         </h4>

@@ -72,8 +72,7 @@ namespace Bookstore
                     new { Controller = "Home", action = "Index", pageNum = 1 }
                     );
 
-                endpoints.MapDefaultControllerRoute();
-
+                endpoints.MapDefaultControllerRoute();            
                 endpoints.MapRazorPages();
             });
         }

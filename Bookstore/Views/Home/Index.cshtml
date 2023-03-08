@@ -5,12 +5,15 @@
 @model BooksViewModel
 
 <h1>Book List Page @Model.PageInfo.CurrentPage</h1>
+<div class="d-flex flex-wrap">
+    @foreach (Book b in Model.Books)
+    {
+        <partial name="BookSummary" model="b" />
+    }
 
-@foreach (Book b in Model.Books)
-{
-    <partial name="BookSummary" model="b"/>
-}
+</div>
+
 <div page-inf="@Model.PageInfo" page-act="Index" page-classes-enabled="true"
-     page-class="btn" page-class-normal="btn-outline-dark"
-     page-class-selected="btn-primary" class="btn-group pull-right m-1">
+        page-class="btn" page-class-normal="btn-outline-dark"
+        page-class-selected="btn-primary" class="btn-group pull-right m-1">
 </div>
